@@ -1,8 +1,5 @@
-## Hi there 👋
+Hi there 👋
 
-<!--
-**FlaviaContiRossini/FlaviaContiRossini** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I am a business analyst based in Zurich, Switzerland
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on a personal profile project
+🔭 I’m currently working on several data analysis projects deploying the main cloud technologies available.
