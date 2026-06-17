@@ -644,3 +644,47 @@ a {
     margin-bottom: 1.9rem;
   }
 }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 2.2rem;
+}
+
+.cta-button,
+.connect-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--purple), #7f76ff);
+  color: #ffffff;
+  box-shadow: 0 18px 30px rgba(99, 91, 255, 0.22);
+}
+
+.secondary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.connect-button.linkedin {
+  background: #ffffff;
+  color: var(--navy);
+}
+
+.connect-button.github {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
