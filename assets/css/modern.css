@@ -1,7 +1,7 @@
 /* Stripe-Inspired Consulting Portfolio */
 :root {
   --bg: #FAFAF8;
-  --surface: rgba(255, 255, 255, 0.82);
+  --surface: rgba(255, 255, 255, 0.9);
   --surface-strong: #ffffff;
   --text: #0A2540;
   --text-muted: rgba(10, 37, 64, 0.72);
@@ -69,15 +69,18 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px; font-weight: 600; transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 .cta-button { background: linear-gradient(135deg, var(--purple), #7f76ff); color: white; box-shadow: 0 18px 30px rgba(99, 91, 255, 0.22); }
-.cta-button:hover, .connect-button:hover, .secondary-link:hover, .content-card:hover, .help-card:hover, .expertise-card:hover, .credential-badge:hover, .education-card:hover { transform: translateY(-2px); }
+.cta-button:hover, .connect-button:hover, .secondary-link:hover, .content-card:hover, .help-card:hover, .credential-badge:hover, .education-card:hover { transform: translateY(-2px); }
 .secondary-link { color: var(--navy); font-weight: 600; padding: 0.85rem 0; }
 .hero-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.metric-card, .hero-card, .content-card, .help-card, .credential-badge, .education-card { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm); backdrop-filter: blur(12px); }
-.metric-card { border-radius: var(--radius-md); padding: 1rem; }
+.metric-card, .hero-card, .content-card, .help-card, .credential-badge, .education-card {
+  background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm); backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+}
+.metric-card { padding: 1rem; }
 .metric-card strong, .card-value, .content-card h3, .help-card h3, .education-card h3 { display: block; }
 .metric-card strong, .content-card h3, .help-card h3, .education-card h3 { font-size: 1.05rem; margin-bottom: 0.45rem; color: var(--navy); }
 .metric-card span, .content-card p, .help-card p, .education-card p, .credential-badge p, .hero-card p, .timeline-content p { color: var(--text-muted); }
-.hero-panel { position: relative; padding: 1.2rem; border-radius: 34px; background: linear-gradient(180deg, rgba(99, 91, 255, 0.08), rgba(255, 255, 255, 0.72)); border: 1px solid rgba(99, 91, 255, 0.14); box-shadow: var(--shadow-lg); }
+.hero-panel { position: relative; padding: 1.2rem; border-radius: 34px; background: linear-gradient(180deg, rgba(99, 91, 255, 0.08), rgba(255, 255, 255, 0.72)); border: 1px solid rgba(99, 91, 255, 0.12); box-shadow: var(--shadow-lg); }
 .hero-avatar { border-radius: 28px; overflow: hidden; aspect-ratio: 1 / 1; margin-bottom: 1rem; background: linear-gradient(180deg, rgba(10, 37, 64, 0.04), rgba(99, 91, 255, 0.04)); }
 .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .hero-card { border-radius: 22px; padding: 1.15rem 1.2rem; }
@@ -88,8 +91,9 @@ a { color: inherit; text-decoration: none; }
 .section-subtitle { margin: 0 0 2rem; }
 .capabilities-grid, .help-grid, .credentials-grid, .education-grid { display: grid; gap: 1rem; }
 .capabilities-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.content-card { border-radius: var(--radius-lg); padding: 1.4rem; }
+.content-card { border-radius: var(--radius-lg); padding: 1.4rem; height: 100%; }
 .help-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.help-card { padding: 1.5rem; height: 100%; }
 .highlight-card { background: linear-gradient(180deg, rgba(99, 91, 255, 0.08), rgba(255, 255, 255, 0.92)); border-color: rgba(99, 91, 255, 0.16); }
 .engagements, .help-section { background: linear-gradient(180deg, rgba(10, 37, 64, 0.02), transparent); }
 .timeline { position: relative; max-width: 980px; margin: 0 auto; padding-left: 1rem; }
@@ -103,9 +107,9 @@ a { color: inherit; text-decoration: none; }
 .credential-badge { border-radius: var(--radius-md); text-align: left; padding: 1.2rem; }
 .credential-badge strong { display: block; color: var(--purple); margin-bottom: 0.5rem; }
 .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.education-card { border-radius: var(--radius-lg); padding: 1.5rem; }
+.education-card { border-radius: var(--radius-lg); padding: 1.5rem; height: 100%; }
 .education-meta { color: var(--purple); margin: 0 0 0.8rem; }
-.connect-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem; align-items: center; padding: 1.8rem; border-radius: 34px; background: linear-gradient(135deg, rgba(10, 37, 64, 0.96), rgba(99, 91, 255, 0.92)); color: #ffffff; box-shadow: var(--shadow-lg); }
+.connect-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem; align-items: center; padding: 1.8rem; border-radius: 34px; background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(99, 91, 255, 0.9)); box-shadow: var(--shadow-lg); }
 .connect-layout .section-kicker, .connect-layout .connect-copy { color: rgba(255, 255, 255, 0.78); }
 .connect-layout h2 { color: #ffffff; max-width: 14ch; }
 .connect-links { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: flex-end; }
