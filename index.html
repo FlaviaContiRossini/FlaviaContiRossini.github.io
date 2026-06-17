@@ -18,9 +18,27 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/css/modern.css?v=3" />
+    <link rel="stylesheet" href="./assets/css/modern.css?v=4" />
 </head>
+<script>
+  const reveals = document.querySelectorAll(
+    '.content-card, .help-card, .credential-badge, .education-card, .timeline-item, .hero-panel'
+  );
 
+  reveals.forEach((el) => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  reveals.forEach((el) => observer.observe(el));
+</script>
 <body>
     <div class="page-shell">
 
