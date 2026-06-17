@@ -291,7 +291,7 @@ section h2:after {
 }
 
 .timeline-period {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--accent-alt);
   text-transform: uppercase;
   letter-spacing: 0.08em;
