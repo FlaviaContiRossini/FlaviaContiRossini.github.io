@@ -20,25 +20,6 @@
 
 	<link rel="stylesheet" href="./assets/css/modern.css?v=5" />
 </head>
-<script>
-  const reveals = document.querySelectorAll(
-    '.content-card, .help-card, .credential-badge, .education-card, .timeline-item, .hero-panel'
-  );
-
-  reveals.forEach((el) => el.classList.add('reveal'));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
-
-  reveals.forEach((el) => observer.observe(el));
-</script>
 <body>
     <div class="page-shell">
 
@@ -257,5 +238,26 @@
 			</div>
 		</footer>
 	</div>
+
+	<script>
+  const reveals = document.querySelectorAll(
+    '.content-card, .help-card, .credential-badge, .education-card, .timeline-item, .hero-panel'
+  );
+
+  reveals.forEach((el) => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  reveals.forEach((el) => observer.observe(el));
+</script>
+
 </body>
 </html>
