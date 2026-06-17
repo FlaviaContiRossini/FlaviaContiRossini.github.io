@@ -776,3 +776,6 @@ a {
   50% { transform: translate(40px,-20px); }
   100% { transform: translate(0,0); }
 }
+.hero::before {
+  animation: drift 9s ease-in-out infinite;
+}
