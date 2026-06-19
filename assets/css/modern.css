@@ -74,22 +74,22 @@ li {
   border-radius: 50%;
   pointer-events: none;
   filter: blur(52px);
-  opacity: 0.45;
+  opacity: 0.38;
   z-index: -1;
 }
 
 .page-shell::before {
   top: -160px;
   left: -140px;
-  background: radial-gradient(circle, rgba(43, 111, 119, 0.34), transparent 70%);
-  animation: orbMoveOne 14s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(43, 111, 119, 0.32), transparent 70%);
+  animation: orbMoveOne 18s ease-in-out infinite;
 }
 
 .page-shell::after {
   top: 140px;
   right: -180px;
-  background: radial-gradient(circle, rgba(11, 31, 51, 0.14), transparent 70%);
-  animation: orbMoveTwo 18s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(11, 31, 51, 0.12), transparent 70%);
+  animation: orbMoveTwo 22s ease-in-out infinite;
 }
 
 .container {
@@ -102,7 +102,7 @@ li {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(248, 249, 250, 0.82);
+  background: rgba(248, 249, 250, 0.86);
   border-bottom: 1px solid var(--border);
 }
 
@@ -164,7 +164,7 @@ li {
 
 .hero {
   position: relative;
-  padding: 6.5rem 0 3.5rem;
+  padding: 6.8rem 0 3.8rem;
 }
 
 .hero-content {
@@ -173,13 +173,13 @@ li {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 2.8rem;
+  gap: 3rem;
 }
 
 .hero-copy h1,
 .section h2 {
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
 }
 
 .eyebrow,
@@ -190,7 +190,7 @@ li {
   letter-spacing: 0.12em;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: rgba(11, 31, 51, 0.56);
 }
 
 .hero-copy h1 {
@@ -204,7 +204,8 @@ li {
 .section-subtitle,
 .connect-copy {
   color: var(--text-muted);
-  font-size: 1.06rem;
+  font-size: 1.08rem;
+  line-height: 1.75;
   max-width: 64ch;
 }
 
@@ -277,7 +278,7 @@ li {
 .education-card,
 .tag-group {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(11, 31, 51, 0.09);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(14px);
   border-radius: var(--radius-lg);
@@ -301,6 +302,7 @@ li {
 .hero-card p,
 .tag-group p {
   color: var(--text-muted);
+  line-height: 1.65;
 }
 
 .hero-panel {
@@ -352,7 +354,7 @@ li {
 
 .strip-grid div {
   padding: 1.1rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(11, 31, 51, 0.09);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.72);
   box-shadow: var(--shadow-sm);
@@ -370,20 +372,23 @@ li {
 }
 
 .section {
-  padding: 5.7rem 0;
+  padding: 6.25rem 0;
 }
 
 .section h2 {
   font-size: clamp(2.1rem, 4vw, 3.6rem);
   line-height: 1.06;
-  margin: 0 0 2rem;
-  max-width: 17ch;
+  margin: 0 0 2.2rem;
+  max-width: 18ch;
 }
 
 .capabilities-grid,
-.experience-grid,
-.framework-grid {
+.experience-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.framework-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .content-card,
@@ -406,10 +411,6 @@ li {
   background: linear-gradient(180deg, rgba(11, 31, 51, 0.025), transparent);
 }
 
-.framework-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -422,7 +423,7 @@ li {
   min-height: 34px;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  background: rgba(11, 31, 51, 0.045);
+  background: rgba(11, 31, 51, 0.04);
   border: 1px solid rgba(11, 31, 51, 0.08);
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -464,7 +465,7 @@ li {
   align-items: center;
   padding: 2rem;
   border-radius: 34px;
-  background: linear-gradient(135deg, rgba(11, 31, 51, 0.97), rgba(31, 41, 51, 0.95));
+  background: linear-gradient(135deg, #0B1F33, #1F2933);
   box-shadow: var(--shadow-lg);
 }
 
@@ -517,9 +518,9 @@ li {
 .education-card:hover,
 .tag-group:hover,
 .strip-grid div:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(43, 111, 119, 0.35);
+  border-color: rgba(43, 111, 119, 0.32);
 }
 
 .content-card:hover h3,
@@ -550,14 +551,14 @@ li {
 
 @keyframes orbMoveOne {
   0% { transform: translate(0, 0) scale(1); }
-  30% { transform: translate(120px, 90px) scale(1.08); }
+  30% { transform: translate(120px, 90px) scale(1.06); }
   60% { transform: translate(40px, 230px) scale(0.96); }
   100% { transform: translate(0, 0) scale(1); }
 }
 
 @keyframes orbMoveTwo {
   0% { transform: translate(0, 0) scale(1); }
-  40% { transform: translate(-120px, 90px) scale(1.08); }
+  40% { transform: translate(-120px, 90px) scale(1.06); }
   75% { transform: translate(-60px, 230px) scale(0.95); }
   100% { transform: translate(0, 0) scale(1); }
 }
