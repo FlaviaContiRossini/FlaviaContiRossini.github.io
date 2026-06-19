@@ -693,3 +693,51 @@ a {
     animation: none !important;
   }
 }
+/* ========================================
+   ANIMATED BACKGROUND ORBS
+======================================== */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page-shell::before,
+.page-shell::after {
+  content: "";
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -2;
+  filter: blur(8px);
+  opacity: 0.8;
+}
+
+.page-shell::before {
+  top: -140px;
+  left: -140px;
+  background: radial-gradient(circle, rgba(99, 91, 255, 0.18), transparent 68%);
+  animation: floatOrbOne 14s ease-in-out infinite;
+}
+
+.page-shell::after {
+  top: 80px;
+  right: -180px;
+  background: radial-gradient(circle, rgba(10, 37, 64, 0.10), transparent 70%);
+  animation: floatOrbTwo 18s ease-in-out infinite;
+}
+
+@keyframes floatOrbOne {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(80px, 60px) scale(1.08); }
+  70% { transform: translate(30px, 180px) scale(0.96); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes floatOrbTwo {
+  0% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-90px, 80px) scale(1.1); }
+  75% { transform: translate(-40px, 220px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
